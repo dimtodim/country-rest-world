@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
 
     let clickMe = document.querySelectorAll('.display-card');
     clickMe.forEach(function(hereWeGo, index) {
-        localStorage.removeItem('saveDateObject');
+        //localStorage.removeItem('saveDateObject');
         hereWeGo.addEventListener('click', function() {
                 
                 saveDateLocaly(index);
