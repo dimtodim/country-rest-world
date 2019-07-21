@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
     
     document.getElementById("borders").innerHTML = saveDateObject_deserialized.borders;
     
-    let back_btn = getElementById("back");
+    let back_btn = document.getElementById("back");
     back_btn.addEventListener('click', function() {
         localStorage.removeItem('saveDateObject');
 });
