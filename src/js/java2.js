@@ -23,24 +23,10 @@ window.addEventListener('load', function () {
     document.getElementById("langs").innerHTML = saveDateObject_deserialized.language[0].name+", Native Name: "+saveDateObject_deserialized.language[0].nativeName;
     
     document.getElementById("borders").innerHTML = saveDateObject_deserialized.borders;
-
+    
+    let back_btn = getElementById("back");
+    back_btn.addEventListener('click', function() {
+        localStorage.removeItem('saveDateObject');
 });
 
-
-/*
-
-function loadTheme() {
-    let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
-    document.documentElement.setAttribute('data-theme',saveDataTheme_deserialized.theme);
-    if (mode.innertext === 'Dark Theme'){
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        mode.innerHTML = 'Light Mode';
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        mode.innerHTML = 'Dark Mode';
-    }
-}
-
-*/
+});
