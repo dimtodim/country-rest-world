@@ -1,4 +1,5 @@
 //console.log(localStorage);
+localStorage.removeItem('saveDateObject');
 let saveDateObject_deserialized = JSON.parse(localStorage.getItem("saveDateObject"));
 let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
 let back_btn = document.getElementById("back");
@@ -28,5 +29,5 @@ window.addEventListener('load', function () {
 
     
 
-        localStorage.removeItem('saveDateObject');
+        
 
