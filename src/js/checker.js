@@ -1,4 +1,36 @@
 window.addEventListener('load', function () {
+        // save date to local storage and function to check index of click item and index of country
+    function saveDateLocaly(index3) {
+
+        countries.forEach(function(drzava, index2){
+            if (index3 === index2){
+
+                let saveDateObject = {
+
+                    flag: drzava.flag,
+                    name: drzava.name,
+                    native: drzava.nativeName,
+                    population: drzava.population.toLocaleString(),
+                    region: drzava.region,
+                    subRegion: drzava.subregion,
+                    capital: drzava.capital,
+                    topLevelDomain: drzava.topLevelDomain,
+                    currencies: drzava.currencies,
+                    language: drzava.languages,
+                    borders: drzava.borders
+                    
+                };
+
+                let saveDateObject_serialized = JSON.stringify(saveDateObject);
+                localStorage.setItem("saveDateObject", saveDateObject_serialized);
+                //this use in new javascript file to get object from local storage
+                //let saveDateObject_deserialized = JSON.parse(localStorage.getItem("saveDateObject"));
+        
+            }
+        });
+
+    }
+    
     let dataTheme = this.document.querySelectorAll('html');
 
     function saveTheme(dataTheme) {
