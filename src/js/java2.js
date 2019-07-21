@@ -27,6 +27,6 @@ window.addEventListener('load', function () {
 });
 
     
-    back_btn.addEventListener('click', function() {
+
         localStorage.removeItem('saveDateObject');
-});
+
