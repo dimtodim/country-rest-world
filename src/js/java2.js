@@ -1,11 +1,6 @@
-//console.log(localStorage);
-
+window.addEventListener('load', function () {
 let saveDateObject_deserialized = JSON.parse(localStorage.getItem("saveDateObject"));
 let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
-//console.log(saveDataTheme_deserialized.theme);
-
-
-window.addEventListener('load', function () {
 
     //write date
     document.documentElement.setAttribute('data-theme',saveDataTheme_deserialized);
@@ -25,8 +20,6 @@ window.addEventListener('load', function () {
     document.getElementById("borders").innerHTML = saveDateObject_deserialized.borders; 
 
 });
-
-    
 
     let back_btn = document.getElementById("back");
     back_btn.addEventListener('click', function() {
