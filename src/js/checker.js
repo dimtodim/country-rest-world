@@ -53,7 +53,7 @@ window.addEventListener('load', function () {
     clickMe.forEach(function(hereWeGo, index) {
         
         hereWeGo.addEventListener('click', function() {
-
+                localStorage.removeItem('saveDateObject');
                 saveDateLocaly(index);
 
         });
