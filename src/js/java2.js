@@ -1,7 +1,7 @@
 //console.log(localStorage);
 let saveDateObject_deserialized = JSON.parse(localStorage.getItem("saveDateObject"));
 let saveDataTheme_deserialized = JSON.parse(localStorage.getItem("saveDataTheme"));
-
+let back_btn = document.getElementById("back");
 //console.log(saveDataTheme_deserialized.theme);
 
 
@@ -22,11 +22,11 @@ window.addEventListener('load', function () {
     document.getElementById("currencies").innerHTML = "Code: "+saveDateObject_deserialized.currencies[0].code+", Name: "+saveDateObject_deserialized.currencies[0].name+", Symbol: "+saveDateObject_deserialized.currencies[0].symbol.toUpperCase();
     document.getElementById("langs").innerHTML = saveDateObject_deserialized.language[0].name+", Native Name: "+saveDateObject_deserialized.language[0].nativeName;
     
-    document.getElementById("borders").innerHTML = saveDateObject_deserialized.borders;
-    
-    let back_btn = document.getElementById("back");
-    back_btn.addEventListener('click', function() {
-        localStorage.removeItem('saveDateObject');
+    document.getElementById("borders").innerHTML = saveDateObject_deserialized.borders; 
+
 });
 
+    
+    back_btn.addEventListener('click', function() {
+        localStorage.removeItem('saveDateObject');
 });
